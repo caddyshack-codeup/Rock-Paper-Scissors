@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors!</title>
+    <link rel="stylesheet" href="css/rock-paper-scissors.css">
+</head>
+<body>
+
+<!--SCOREBOARD-->
+
+    <div class="scoreboard">
+        <div class="player-one-score-container">
+            <p>Player One Score</p>
+            <p id="player-one-score">0</p>
+        </div>
+        <div class="player-two-score-container">
+            <p>Player Two Score</p>
+            <p id="player-two-score">0</p>
+        </div>
+    </div>
+
+<!--PLAYFIELD-->
+
+    <div class="play-field">
+        <div class="player-one-play-field">
+        </div>
+        <div class="player-two-play-field">
+        </div>
+
+<!--BOTTOM CONTAINER-->
+
+        <div class="bottom-container">
+
+
+            <form id="form">
+
+                <!--choose hand options-->
+                <div class="choose-hand-container">
+
+                    <label for="rock">
+                    <input class="hand" id="rock" type="radio" name="hand" value="rock">Rock
+                    </label>
+                    <label for="paper">
+                        <input class="hand" id="paper" type="radio" name="hand" value="paper">Paper
+                    </label>
+                    <label for="scissors">
+                        <input class="hand" id="scissors" type="radio" name="hand" value="scissors">Scissors
+                    </label>
+
+                </div>
+
+                <!--ready button-->
+
+                <div class="start-round-container">
+                     <button type="submit" id="start-round-button">Ready!</button>
+                </div>
+            </form>
+
+
+
+        </div>
+
+    </div>
+
+
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="js/rock-paper-scissors.js"></script>
+</body>
+</html>

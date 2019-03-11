@@ -1,0 +1,129 @@
+body{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+/*scoreboard*/
+
+.scoreboard {
+    height: 100px;
+    background-color: cornflowerblue;
+    width: 100%;
+}
+.player-one-score-container {
+    margin: 10px 35px;
+    padding: 0;
+    display: inline-block;
+    color: white;
+}
+.player-one-score-container p {
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    display: block;
+}
+#player-one-score,
+#player-two-score {
+    text-align: center;
+    font-size: 40px;
+}
+.player-two-score-container {
+    margin: 10px 35px;
+    float: right;
+    color: white;
+}
+.player-two-score-container p {
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+}
+
+/*play field*/
+
+.play-field{
+    height: 600px;
+    background-color: orange;
+}
+.player-one-play-field {
+    height: 250px;
+    width: 250px;
+    background-color: rgb(254, 233, 35);
+    display: inline-block;
+    margin: 50px 5px 0 15px;
+}
+.player-two-play-field {
+    height: 250px;
+    width: 250px;
+    background-color: rgb(254, 233, 35);
+    float: right;
+    margin: 50px 15px 0 5px;
+}
+
+/*rock paper scissors images*/
+.rock-left {
+     background-image: url("../img/rock-left.png");
+     background-repeat: no-repeat;
+     background-size: 80%;
+     background-position: center;
+ }
+.paper-left {
+    background-image: url("../img/paper-left.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+.scissors-left {
+    background-image: url("../img/scissors-left.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+.rock-right {
+    background-image: url("../img/rock-right.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+.paper-right {
+    background-image: url("../img/paper-right.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+.scissors-right {
+    background-image: url("../img/scissors-right.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+
+/*buttons and choose hand*/
+
+.bottom-container {
+    width: 600px;
+    margin: 20px auto;
+    background-color: cornflowerblue;
+    height: 140px;
+}
+.choose-hand-container {
+    background-color: yellow;
+    display: inline-block;
+    width: 320px;
+    height: 100px;
+    margin: 20px 20px;
+}
+
+.start-round-container {
+    background-color: yellow;
+    float: right;
+    width: 200px;
+    height: 100px;
+    margin: 20px 20px;
+}
+form button {
+    margin: 25px auto 25px 25px;
+    height: 50px;
+    width: 150px;
+
+}
