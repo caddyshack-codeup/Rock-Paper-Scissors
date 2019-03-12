@@ -2,6 +2,7 @@ body{
     margin: 0 auto;
     width: 100%;
     max-width: 600px;
+    font-family: 'Roboto Mono', monospace;
 }
 
 /*scoreboard*/
@@ -51,6 +52,9 @@ body{
     background-color: rgb(254, 233, 35);
     display: inline-block;
     margin: 50px 5px 0 15px;
+    border: 3px solid rgb(48, 46, 47);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: -4px 8px 29px -6px;
 }
 .player-two-play-field {
     height: 250px;
@@ -58,6 +62,9 @@ body{
     background-color: rgb(254, 233, 35);
     float: right;
     margin: 50px 15px 0 5px;
+    border: 3px solid rgb(48, 46, 47);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 4px 8px 29px -6px;
 }
 
 /*rock paper scissors images*/
@@ -66,6 +73,7 @@ body{
      background-repeat: no-repeat;
      background-size: 80%;
      background-position: center;
+     position: relative;
  }
 .paper-left {
     background-image: url("../img/paper-left.png");
@@ -84,6 +92,7 @@ body{
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: center;
+    position: relative;
 }
 .paper-right {
     background-image: url("../img/paper-right.png");
@@ -101,9 +110,9 @@ body{
 /*buttons and choose hand*/
 
 .bottom-container {
+    background-color: cornflowerblue;
     width: 600px;
     margin: 20px auto;
-    background-color: cornflowerblue;
     height: 140px;
 }
 .choose-hand-container {
@@ -113,7 +122,6 @@ body{
     height: 100px;
     margin: 20px 20px;
 }
-
 .start-round-container {
     background-color: yellow;
     float: right;
@@ -121,9 +129,17 @@ body{
     height: 100px;
     margin: 20px 20px;
 }
-form button {
+form button,
+.reset-button {
     margin: 25px auto 25px 25px;
     height: 50px;
     width: 150px;
-
+    font-family: 'Roboto Mono', monospace;
+}
+.reset-button-container {
+    background-color: yellow;
+    float: left;
+    width: 200px;
+    height: 100px;
+    margin: 20px 20px;
 }
