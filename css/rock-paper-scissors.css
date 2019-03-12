@@ -9,8 +9,10 @@ body{
 
 .scoreboard {
     height: 100px;
-    background-color: cornflowerblue;
+    background-image: linear-gradient(cornflowerblue, #4466ea);
     width: 100%;
+    border-bottom: 3px solid black;
+    box-shadow: 4px 8px 29px -6px;
 }
 .player-one-score-container {
     margin: 10px 35px;
@@ -44,7 +46,7 @@ body{
 
 .play-field{
     height: 600px;
-    background-color: orange;
+    background-image: linear-gradient(#fdc941, orange);
 }
 .player-one-play-field {
     height: 250px;
@@ -110,10 +112,11 @@ body{
 /*buttons and choose hand*/
 
 .bottom-container {
-    background-color: cornflowerblue;
+    background-image: linear-gradient(cornflowerblue, #4466ea);
     width: 600px;
     margin: 20px auto;
-    height: 140px;
+    height: 300px;
+    border-top: 3px solid black;
 }
 .choose-hand-container {
     background-color: yellow;
@@ -121,13 +124,19 @@ body{
     width: 320px;
     height: 100px;
     margin: 20px 20px;
+    box-shadow: -4px 8px 29px -6px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
 }
+
 .start-round-container {
     background-color: yellow;
     float: right;
     width: 200px;
     height: 100px;
     margin: 20px 20px;
+    box-shadow: 4px 8px 29px -6px;
 }
 form button,
 .reset-button {
@@ -135,6 +144,15 @@ form button,
     height: 50px;
     width: 150px;
     font-family: 'Roboto Mono', monospace;
+    border: 3px solid rgb(48, 46, 47);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 4px 8px 29px -6px;
+    outline: none;
+}
+form button:hover,
+.reset-button:hover {
+    background-color: cornflowerblue;
+    color: white;
 }
 .reset-button-container {
     background-color: yellow;
@@ -142,4 +160,14 @@ form button,
     width: 200px;
     height: 100px;
     margin: 20px 20px;
+    box-shadow: -4px 8px 29px -6px;
+}
+.message-center {
+    width: 320px;
+    height: 50px;
+    float: right;
+    margin: 15px 20px 0 0;
+    font-size: 50px;
+    color: white;
+    text-align: center;
 }

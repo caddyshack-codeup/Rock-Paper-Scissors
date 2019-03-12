@@ -11,6 +11,10 @@
         let compSelection;
         let playerOneScore;
         let playerTwoScore;
+        const whipSound = $('#whip-sound')[0];
+        const drumSound = $('#drum-sound')[0];
+        const messageCenter = $('.message-center');
+
 
 
         //First the user will pick their hand.
@@ -39,8 +43,7 @@
             $('.start-round-container button').click(function(e){
                 e.preventDefault();
                 $('#form').trigger('reset');
-
-
+                messageCenter.html('');
 
 
 
@@ -50,12 +53,15 @@
                 let countInterval = setInterval(function(){
                     countdown += 1;
                     if (countdown <= 1) {
+                        drumSound.play();
                         $('.player-one-play-field').removeClass().addClass('rock-left player-one-play-field').css('background-size', '50%')
                                                                                                              .animate({backgroundSize: '80%'});
+
                         $('.player-two-play-field').removeClass().addClass('rock-right player-two-play-field').css('background-size', '50%')
                                                                                                              .animate({backgroundSize: '80%'});
                     }
                     else if (countdown === 2) {
+                        drumSound.play()
                         $('.player-one-play-field').removeClass().addClass('rock-left player-one-play-field').css('background-size', '50%')
                                                                                                              .animate({backgroundSize: '80%'});
                         $('.player-two-play-field').removeClass().addClass('rock-right player-two-play-field').css('background-size', '50%')
@@ -66,7 +72,7 @@
 
                     else if (countdown === 3) {
                         clearInterval(countInterval);
-
+                        whipSound.play();
 
                         //random number between 1 and 3 that chooses computer's hand
 
@@ -106,18 +112,29 @@
 
                         if (userSelection === 'rock' && compSelection === 'paper') {
                             playerTwoCounter += 1;
+                            messageCenter.html('Computer wins!');
+
                         } else if (userSelection === 'rock' && compSelection === 'scissors') {
                             playerOneCounter += 1;
+                            messageCenter.html('You win!');
+
                         } else if (userSelection === 'paper' && compSelection === 'rock') {
-                            playerOneCounter += 1;
+                            playerOneCounter += 1;YoumessageCenter.html('You win!')
+
                         } else if (userSelection === 'paper' && compSelection === 'scissors') {
                             playerTwoCounter += 1;
+                            messageCenter.html('Computer wins!');
                         } else if (userSelection === 'scissors' && compSelection === 'rock') {
                             playerTwoCounter += 1;
+                            messageCenter.html('Computer wins!');
                         } else if (userSelection === 'scissors' && compSelection === 'paper') {
                             playerOneCounter += 1;
+                            messageCenter.html('You win!');
+
                         } else {
                             console.log('tie');
+                            messageCenter.html("It's a tie!");
+
                         }
 
                         //    This code updates the live score
@@ -131,8 +148,6 @@
             });
     }
 
-
-
     playGame();
 
     //This code prevents default behavior when user clicks ready button before making a selection
@@ -141,21 +156,12 @@
         e.preventDefault();
     });
 
-
-
+    //Reset button refreshes entire page
 
     $('.reset-button').click(function(){
-
+        location.reload();
         playGame();
-        playerOneCounter = 0;
-        playerTwoCounter = 0;
-
-
     });
-
-
-
-
 })();
 
 
